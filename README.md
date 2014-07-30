@@ -16,9 +16,3 @@ You can execute the container with something like:
 
     docker run -d -P --name timemachine odiobill/timemachine
 
-To to add any user, you may want to run another (temporary) container that imports its volumes. Run it with:
-
-    docker run -i -t --name config.timemachine --volumes-from timemachine odiobill/timemachine bash
-
-Then you can use the *useradd* system command to define them and having the same accounts also on the main **timemachine** container.
-
